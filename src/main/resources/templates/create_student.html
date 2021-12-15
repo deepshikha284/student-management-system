@@ -9,24 +9,51 @@
           crossorigin="anonymous">
 </head>
 <body>
-    <div class = "container">
-        <div class = "row">
-            <div class = "col-lg-6 col-md-6 col-sm-6 container justify-content-center caed">
-                <h1 class="text-center"> Create New Student </h1>
-                <div class = "card-body">
-                    <form th:action = "@{/students}"> th:object = "${student}}" method="POST">
-                        <div class = "form-group">
-                            <label> Student First Name</label>
-                            <input
-                                type = "text"
-                                name = "firstName"
-                                th:field = "firstName"
-                                placeHolder = "Enter Student"
-                                />
-                        </div>
-
-                    </form>>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center cad">
+            <h1 class="text-center"> Create New Student </h1>
+            <div class="card-body">
+                <form th:action="@{/students}" th:object = "${student}" method="POST">
+                    <div class="form-group">
+                        <label> Student First Name </label>
+                        <input
+                                type="text"
+                                name="firstName"
+                                th:field="*{firstName}"
+                                class="form-control"
+                                placeHolder="Enter Student first Name"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label> Student Last Name </label>
+                        <input
+                                type="text"
+                                name="lastName"
+                                th:field="*{lastName}"
+                                class="form-control"
+                                placeHolder="Enter Student last Name"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label> Student Email </label>
+                        <input
+                                type="text"
+                                name="email"
+                                th:field="*{email}"
+                                class="form-control"
+                                placeHolder="Enter Student email"
+                        />
+                    </div>
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
+</div>
 </body>
 </html>
