@@ -34,7 +34,7 @@ public class Student {
     }
 
     public void setId(long id) {
-        id = id;
+        this.id = id;
     }
 
     public String getFirstName() {
